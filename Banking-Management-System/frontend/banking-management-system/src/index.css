@@ -1,0 +1,149 @@
+/* ==========================================================
+   Banking Management System
+   Global Styles
+========================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    font-family:
+        "Segoe UI",
+        Tahoma,
+        Geneva,
+        Verdana,
+        sans-serif;
+    background-color: #f4f7fc;
+    color: #212529;
+    overflow-x: hidden;
+}
+
+/* ==========================================
+   Links
+========================================== */
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/* ==========================================
+   Cards
+========================================== */
+
+.card {
+    border-radius: 12px;
+}
+
+.dashboard-card {
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* ==========================================
+   Buttons
+========================================== */
+
+.btn {
+    border-radius: 8px;
+}
+
+/* ==========================================
+   Sidebar
+========================================== */
+
+.sidebar-link {
+    transition: all 0.2s ease;
+}
+
+.sidebar-link:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.sidebar-link.active {
+    background-color: #0d6efd;
+    color: #ffffff;
+}
+
+/* ==========================================
+   Forms
+========================================== */
+
+.form-control {
+    border-radius: 8px;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: #0d6efd;
+}
+
+/* ==========================================
+   Tables
+========================================== */
+
+.table th {
+    font-weight: 600;
+}
+
+.table td,
+.table th {
+    vertical-align: middle;
+}
+
+/* ==========================================
+   Utilities
+========================================== */
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.page-title {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.section-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+/* ==========================================
+   Responsive
+========================================== */
+
+@media (max-width: 991px) {
+    .page-title {
+        font-size: 1.7rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .page-title {
+        font-size: 1.4rem;
+    }
+
+    .card {
+        margin-bottom: 1rem;
+    }
+}

@@ -1,0 +1,346 @@
+/* ==========================================================
+   Banking Management System
+   Enterprise Layout Styles
+========================================================== */
+
+/* -----------------------------
+   Root Variables
+------------------------------ */
+
+:root {
+
+    --navbar-height: 72px;
+
+    --sidebar-width: 260px;
+
+    --footer-height: 70px;
+
+    --primary-color: #0d6efd;
+
+    --dark-sidebar: #212529;
+
+    --light-background: #f4f7fc;
+
+}
+
+/* -----------------------------
+   Global
+------------------------------ */
+
+html,
+body,
+#root {
+
+    height: 100%;
+
+}
+
+body {
+
+    margin: 0;
+
+    padding: 0;
+
+    overflow-x: hidden;
+
+    background: var(--light-background);
+
+    font-family: "Segoe UI", sans-serif;
+
+}
+
+/* -----------------------------
+   Layout
+------------------------------ */
+
+.app-layout {
+
+    display: flex;
+
+    flex-direction: column;
+
+    min-height: 100vh;
+
+}
+
+/* -----------------------------
+   Navbar
+------------------------------ */
+
+.app-navbar {
+
+    height: var(--navbar-height);
+
+    background: #fff;
+
+    border-bottom: 1px solid #dee2e6;
+
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    right: 0;
+
+    z-index: 1050;
+
+}
+
+/* -----------------------------
+   Main Wrapper
+------------------------------ */
+
+.app-body {
+
+    display: flex;
+
+    margin-top: var(--navbar-height);
+
+    min-height: calc(100vh - var(--navbar-height));
+
+}
+
+/* -----------------------------
+   Sidebar
+------------------------------ */
+
+.app-sidebar {
+
+    width: var(--sidebar-width);
+
+    min-width: var(--sidebar-width);
+
+    background: var(--dark-sidebar);
+
+    color: #fff;
+
+    position: fixed;
+
+    top: var(--navbar-height);
+
+    left: 0;
+
+    bottom: 0;
+
+    overflow-y: auto;
+
+    overflow-x: hidden;
+
+    z-index: 1040;
+
+}
+
+/* Scrollbar */
+
+.app-sidebar::-webkit-scrollbar {
+
+    width: 7px;
+
+}
+
+.app-sidebar::-webkit-scrollbar-thumb {
+
+    background: #495057;
+
+    border-radius: 20px;
+
+}
+
+/* -----------------------------
+   Content
+------------------------------ */
+
+.app-content {
+
+    flex: 1;
+
+    margin-left: var(--sidebar-width);
+
+    padding: 25px;
+
+    min-height: calc(100vh - var(--navbar-height));
+
+    background: var(--light-background);
+
+}
+
+/* -----------------------------
+   Footer
+------------------------------ */
+
+.app-footer {
+
+    margin-left: var(--sidebar-width);
+
+}
+
+/* -----------------------------
+   Sidebar Menu
+------------------------------ */
+
+.sidebar-link {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 14px 20px;
+
+    color: #ced4da;
+
+    text-decoration: none;
+
+    transition: all .25s;
+
+    border-left: 4px solid transparent;
+
+}
+
+.sidebar-link:hover {
+
+    background: #343a40;
+
+    color: #fff;
+
+    border-left-color: var(--primary-color);
+
+}
+
+.sidebar-link.active {
+
+    background: var(--primary-color);
+
+    color: #fff;
+
+    border-left-color: #fff;
+
+}
+
+/* -----------------------------
+   Sidebar Header
+------------------------------ */
+
+.sidebar-header {
+
+    padding: 25px;
+
+    border-bottom: 1px solid #495057;
+
+    text-align: center;
+
+}
+
+.sidebar-avatar {
+
+    width: 70px;
+
+    height: 70px;
+
+    border-radius: 50%;
+
+    background: var(--primary-color);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin: auto auto 15px;
+
+}
+
+/* -----------------------------
+   Dashboard Cards
+------------------------------ */
+
+.dashboard-card {
+
+    border: none;
+
+    border-radius: 15px;
+
+    box-shadow: 0 2px 10px rgba(0,0,0,.08);
+
+    transition: .25s;
+
+}
+
+.dashboard-card:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow: 0 8px 20px rgba(0,0,0,.15);
+
+}
+
+/* -----------------------------
+   Buttons
+------------------------------ */
+
+.btn-rounded {
+
+    border-radius: 50px;
+
+}
+
+/* -----------------------------
+   Tables
+------------------------------ */
+
+.table-card {
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    background: #fff;
+
+}
+
+/* -----------------------------
+   Responsive
+------------------------------ */
+
+@media (max-width: 992px) {
+
+    .app-sidebar {
+
+        left: -260px;
+
+        transition: .3s;
+
+    }
+
+    .app-sidebar.show {
+
+        left: 0;
+
+    }
+
+    .app-content {
+
+        margin-left: 0;
+
+    }
+
+    .app-footer {
+
+        margin-left: 0;
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    .app-content{
+
+        padding:15px;
+
+    }
+
+}

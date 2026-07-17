@@ -1,0 +1,46 @@
+const ACCESS_TOKEN = "accessToken";
+const REFRESH_TOKEN = "refreshToken";
+const USER = "user";
+
+const tokenStorage = {
+
+    setAccessToken(token) {
+        localStorage.setItem(ACCESS_TOKEN, token);
+    },
+
+    getAccessToken() {
+        return localStorage.getItem(ACCESS_TOKEN);
+    },
+
+    setRefreshToken(token) {
+        localStorage.setItem(REFRESH_TOKEN, token);
+    },
+
+    getRefreshToken() {
+        return localStorage.getItem(REFRESH_TOKEN);
+    },
+
+    setUser(user) {
+        localStorage.setItem(USER, JSON.stringify(user));
+    },
+
+    getUser() {
+
+        const user = localStorage.getItem(USER);
+
+        if (!user || user === "undefined") {
+            return null;
+        }
+
+        return JSON.parse(user);
+    },
+
+    clear() {
+        localStorage.removeItem(ACCESS_TOKEN);
+        localStorage.removeItem(REFRESH_TOKEN);
+        localStorage.removeItem(USER);
+    }
+
+};
+
+export default tokenStorage;
